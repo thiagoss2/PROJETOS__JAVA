@@ -3,5 +3,18 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
+    ],
+    "cSpell.words": [
+        "BLOCO",
+        "Digito",
+        "Informacoes",
+        "informaçoes",
+        "joao",
+        "Joao",
+        "JOAO",
+        "João",
+        "mostra",
+        "Numero",
+        "Saldo"
     ]
 }
