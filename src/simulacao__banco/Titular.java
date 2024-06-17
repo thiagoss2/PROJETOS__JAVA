@@ -9,6 +9,7 @@ public class Titular {
 
 
     public Titular(String nome , String cpf, String rg) {
+        this.nome = nome;
         this.cpf = cpf;
         this.rg = rg;
         this.conta = conta;
