@@ -11,6 +11,7 @@ public class Conta {
     private GeradorPagamento geradorPagamento;
 
     public Conta(int numero, int digito, Titular titular) {
+        this.numero = numero;
         this.digito = digito;
         this.titular = titular;
         this.geradorPagamento = geradorPagamento;
@@ -51,7 +52,7 @@ public class Conta {
         } else {
             this.saldo -= saldo;
             this.numeroDeSaques++;
-            this.dadosSaque(saldo)  
+            this.dadosSaque(saldo);
         }
     }
 
