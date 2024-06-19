@@ -1,7 +1,6 @@
 package simulacao__banco;
 
 // idente o codigo pra mim remova os espaços em branco
-
 public class Conta {
 
     private int numero;
@@ -16,11 +15,10 @@ public class Conta {
         this.titular = titular;
         this.geradorPagamento = geradorPagamento;
     }
-    
-    public void setTipoPagamento(GeradorPagamento geradorPagamento) {
-         this.geradorPagamento = geradorPagamento;
-    }
 
+    public void setTipoPagamento(GeradorPagamento geradorPagamento) {
+        this.geradorPagamento = geradorPagamento;
+    }
 
     public int getNumeroDeSaques() {
         return numeroDeSaques;
@@ -50,10 +48,11 @@ public class Conta {
     public void sacar(double saldo) {
         if (saldo > this.saldo) {
             throw new IllegalArgumentException("O VALOR DE SAQUE EXEDE O LIMITE DA CONTA");
+        } else {
+            this.saldo -= saldo;
+            this.numeroDeSaques++;
+            this.dadosSaque(saldo)  
         }
-        this.saldo -= saldo;
-        this.numeroDeSaques++;
-        this.dadosSaque(saldo);
     }
 
     public GeradorPagamento getGeradorPagamento() {
@@ -75,7 +74,6 @@ public class Conta {
         System.out.println("Conta de origem: " + this.getNumero());
         System.out.println("Conta de destino: " + outraConta.getNumero());
         System.out.println();
-
     }
 
     private void dadosDoDeposto(double saldo) {
@@ -91,7 +89,6 @@ public class Conta {
         System.out.println("Valor sacado: " + saldo);
         System.out.println("Numero de saques realizados: " + this.getNumeroDeSaques());
         System.out.println();
-
     }
 
     public void mostraInformacoes() {
@@ -99,11 +96,7 @@ public class Conta {
         System.out.println();
     }
 
-    public void mostrarNovasInformacoes() {
-        System.out.println("Estou mostrando novas da Conta");
-    }
-
     public void geradorPagamento(String tipoPagamento) {
-         this.geradorPagamento.processaPagamento(tipoPagamento);
+        this.geradorPagamento.processaPagamento(tipoPagamento);
     }
- }
+}

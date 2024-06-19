@@ -6,10 +6,8 @@ public class ContaCorrente extends Conta {
        super(numero, digito, titular);
     }
     
-   
     @Override
     public void mostrarNovasInformacoes() { 
         System.out.println("Informação da conta corrente: ");
     }
-
 }
